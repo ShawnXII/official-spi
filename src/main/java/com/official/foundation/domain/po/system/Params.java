@@ -4,73 +4,55 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-import com.official.core.base.entity.BaseEntity;
+import com.official.core.base.entity.AbstractEntity;
 
 /**
- * 系统字典
+ * 系统参数
  * @author ShawnXII
  * @Version 1.0
  */
 @Entity
-@Table(name = "system_dict")
-public class Dict extends BaseEntity<Long>{
-
+@Table(name = "system_params")
+public class Params extends AbstractEntity<Long>{
+	
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -7857569021957266186L;
+	private static final long serialVersionUID = -5902696145293801356L;
+
 	@Column(name="key",nullable=false)
 	private String key;
 	
 	@Column(name="value",nullable=false)
 	private String value;
-	
+	//参数说明
 	@Column(name="info")
 	private String info;
 	
-	@Column(name="type",nullable=false)
-	private String type;
+	@Column(name="config_params_id",nullable=false)
+	private Long configParamsId;
 	
-	@Column(name="state",nullable=false)
-	private Integer state;
-
 	public String getKey() {
 		return key;
 	}
-
 	public void setKey(String key) {
 		this.key = key;
 	}
-
 	public String getValue() {
 		return value;
 	}
-
 	public void setValue(String value) {
 		this.value = value;
 	}
-
 	public String getInfo() {
 		return info;
 	}
-
 	public void setInfo(String info) {
 		this.info = info;
 	}
-
-	public String getType() {
-		return type;
-	}
-
-	public void setType(String type) {
-		this.type = type;
-	}
-
-	public Integer getState() {
-		return state;
-	}
-
-	public void setState(Integer state) {
-		this.state = state;
+	@Override
+	public String toString() {
+		return "Params [key=" + key + ", value=" + value + ", info=" + info + ", configParamsId=" + configParamsId
+				+ "]";
 	}	
 }
