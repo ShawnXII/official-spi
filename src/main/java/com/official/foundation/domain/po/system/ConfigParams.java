@@ -19,6 +19,11 @@ import com.official.core.base.entity.BaseEntity;
 @Table(name = "system_config_params")
 public class ConfigParams extends BaseEntity<Long>{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3439160779108028879L;
+
 	//参数类型 必填
 	@Column(name="type",nullable=false)
 	private String type;

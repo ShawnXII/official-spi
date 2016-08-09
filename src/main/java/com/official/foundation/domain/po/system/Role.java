@@ -34,7 +34,7 @@ public class Role extends BaseEntity<Long>{
 	@JoinTable(name = "role_power", joinColumns = {
 			@JoinColumn(name = "role_id", referencedColumnName = "id") }, inverseJoinColumns = {
 					@JoinColumn(name = "power_id", referencedColumnName = "id") })
-	private Set<Power> resources = Sets.newHashSet();
+	private Set<Power> powers = Sets.newHashSet();
 	
 	@Column(name = "title",nullable=false)
 	private String title;
@@ -48,12 +48,14 @@ public class Role extends BaseEntity<Long>{
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "role")
 	private Set<Account> accounts=Sets.newHashSet();
 
-	public Set<Power> getResources() {
-		return resources;
+	
+
+	public Set<Power> getPowers() {
+		return powers;
 	}
 
-	public void setResources(Set<Power> resources) {
-		this.resources = resources;
+	public void setPowers(Set<Power> powers) {
+		this.powers = powers;
 	}
 
 	public String getTitle() {

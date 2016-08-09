@@ -54,9 +54,11 @@ public class Position extends BaseEntity<Long> {
 	// 用于定位位置
 	@Column(name="position")
 	private String position;
+	
 	// 状态 0:正常 1:禁用
 	@Column(name="state")
 	private Integer state;
+	
 	public String getTitle() {
 		return title;
 	}
