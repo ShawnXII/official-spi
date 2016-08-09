@@ -36,7 +36,7 @@ public class Power extends BaseEntity<Long> {
 	@JoinTable(name = "power_resource", joinColumns = {
 			@JoinColumn(name = "power_id", referencedColumnName = "id") }, inverseJoinColumns = {
 					@JoinColumn(name = "resources_id", referencedColumnName = "id") })
-	private Set<Resource> resources = Sets.newHashSet();
+	private Set<SystemResource> resources = Sets.newHashSet();
 	// 说明
 	@Column(name = "info")
 	private String info;
@@ -60,11 +60,11 @@ public class Power extends BaseEntity<Long> {
 		this.title = title;
 	}
 
-	public Set<Resource> getResources() {
+	public Set<SystemResource> getSystemResources() {
 		return resources;
 	}
 
-	public void setResources(Set<Resource> resources) {
+	public void setSystemResources(Set<SystemResource> resources) {
 		this.resources = resources;
 	}
 

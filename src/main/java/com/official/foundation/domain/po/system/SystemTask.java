@@ -13,7 +13,7 @@ import com.official.core.base.entity.BaseEntity;
  */
 @Entity
 @Table(name = "system_task")
-public class Task extends BaseEntity<Long>{
+public class SystemTask extends BaseEntity<Long>{
 
 	/**
 	 * 

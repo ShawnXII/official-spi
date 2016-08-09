@@ -39,7 +39,7 @@ public class Booth extends BaseEntity<Long>{
 	@Column(name="title",nullable=false)
 	private String title;
 	
-	@Column(name="title")
+	@Column(name="images")
 	private String images;
 	//当商品ID为空或者商品不存在时,该字段才有效
 	@Column(name="url")

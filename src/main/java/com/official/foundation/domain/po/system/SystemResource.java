@@ -18,7 +18,7 @@ import com.official.core.base.entity.BaseEntity;
  */
 @Entity
 @Table(name = "system_resource")
-public class Resource extends BaseEntity<Long>{
+public class SystemResource extends BaseEntity<Long>{
 
 	/**
 	 * 

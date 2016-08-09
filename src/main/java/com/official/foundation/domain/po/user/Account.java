@@ -40,7 +40,7 @@ public class Account extends BaseEntity<Long>{
 	@Column(name = "mobile_state")
 	private Integer mobileState;
 	//邮箱
-	@Column(name = "mobile")
+	@Column(name = "email")
 	private String email;	
 	//邮箱验证状态
 	@Column(name = "email_state")
@@ -62,12 +62,6 @@ public class Account extends BaseEntity<Long>{
 	@ManyToOne(cascade = { CascadeType.REFRESH, CascadeType.MERGE })
     @JoinColumn(name = "role_id")
 	private Role role;
-	
-	
-	
-	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "user_id",referencedColumnName="id")
-	private User user;
 
 	public String getUsername() {
 		return username;
@@ -163,10 +157,6 @@ public class Account extends BaseEntity<Long>{
 
 	public void setRole(Role role) {
 		this.role = role;
-	}
-
-	public static long getSerialversionuid() {
-		return serialVersionUID;
 	}
 	
 }

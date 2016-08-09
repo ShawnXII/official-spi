@@ -13,7 +13,7 @@ import com.official.core.base.entity.BaseEntity;
  */
 @Entity
 @Table(name = "user_feedback")
-public class Feedback extends BaseEntity<Long>{
+public class UserFeedback extends BaseEntity<Long>{
 
 	/**
 	 * 

@@ -1,9 +1,7 @@
 package com.official.foundation.domain.po.user;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import com.official.core.base.entity.BaseEntity;
@@ -15,7 +13,7 @@ import com.official.core.base.entity.BaseEntity;
  */
 @Entity
 @Table(name = "user_store")
-public class Store extends BaseEntity<Long>{
+public class UserStore extends BaseEntity<Long>{
 
 	/**
 	 * 
@@ -75,16 +73,6 @@ public class Store extends BaseEntity<Long>{
 	private String region;
 	
 
-	@OneToOne(optional = true, cascade = CascadeType.ALL, mappedBy="store")
-	private User user;
-	
-	
-	public User getUser() {
-		return user;
-	}
-	public void setUser(User user) {
-		this.user = user;
-	}
 	public String getName() {
 		return name;
 	}
