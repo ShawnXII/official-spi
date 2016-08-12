@@ -4,16 +4,19 @@ import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 import com.google.common.collect.Sets;
 import com.official.core.base.entity.BaseEntity;
 import com.official.foundation.domain.po.user.Account;
-
+@Entity
+@Table(name = "system_album")
 public class Album extends BaseEntity<Long>{
 
 	/**

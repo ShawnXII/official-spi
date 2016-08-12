@@ -1,6 +1,8 @@
 package com.official.foundation.domain.po.system;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 import com.official.core.base.entity.BaseEntity;
 /**
@@ -8,6 +10,8 @@ import com.official.core.base.entity.BaseEntity;
  * @author ShawnXII
  * @Version 1.0
  */
+@Entity
+@Table(name = "system_accessory")
 public class Accessory extends BaseEntity<Long>{
 
 	/**

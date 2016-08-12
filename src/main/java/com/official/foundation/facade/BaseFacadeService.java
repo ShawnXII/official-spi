@@ -34,14 +34,6 @@ public interface BaseFacadeService<M extends Entity<ID>, ID extends java.io.Seri
 	public List<M> save(Collection<M> m);
 
 	/**
-	 * 保存或者修改
-	 * 
-	 * @param m
-	 * @return
-	 */
-	public M saveOrUpdate(M m);
-
-	/**
 	 * 保存并清空缓存数据
 	 * 
 	 * @param m
@@ -70,7 +62,7 @@ public interface BaseFacadeService<M extends Entity<ID>, ID extends java.io.Seri
 	 * @param ids
 	 * @return
 	 */
-	public int delete(Collection<ID> ids);
+	public int delete(ID[] ids);
 
 	/**
 	 * 按照主键查询
@@ -126,21 +118,6 @@ public interface BaseFacadeService<M extends Entity<ID>, ID extends java.io.Seri
 	 */
 	public Page<M> findAll(Searchable searchable);
 
-	/**
-	 * 组装自定义sql
-	 * 
-	 * @param definedSql
-	 * @return
-	 */
-	public List<M> findAll(String definedSql);
-
-	/**
-	 * 组装自定义SQL
-	 * 
-	 * @param definedSql
-	 * @return
-	 */
-	public List<M> findAll(String definedSql, Object... params);
 
 	/**
 	 * 按照条件不分页 不排序查询

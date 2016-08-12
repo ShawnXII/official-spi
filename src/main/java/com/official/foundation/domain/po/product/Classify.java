@@ -134,4 +134,19 @@ public class Classify extends BaseEntity<Long>{
 		this.state = state;
 	}
 
+	@Override
+	public String toString() {
+		return "Classify [title=" + title + ", icon=" + icon + ", keywords=" + keywords + ", description=" + description
+				+ ", parentId=" + parentId + ", weight=" + weight + ", storeId=" + storeId + ", state=" + state
+				+ ", parent=" + parent + ", childs=" + childs + ", getParent()=" + getParent() + ", getChilds()="
+				+ getChilds() + ", getTitle()=" + getTitle() + ", getIcon()=" + getIcon() + ", getKeywords()="
+				+ getKeywords() + ", getDescription()=" + getDescription() + ", getParentId()=" + getParentId()
+				+ ", getWeight()=" + getWeight() + ", getStoreId()=" + getStoreId() + ", getState()=" + getState()
+				+ ", getCreateTime()=" + getCreateTime() + ", getUpdateTime()=" + getUpdateTime() + ", getCreateBy()="
+				+ getCreateBy() + ", getUpdateBy()=" + getUpdateBy() + ", getRemarks()=" + getRemarks()
+				+ ", getDeleteStatus()=" + getDeleteStatus() + ", getId()=" + getId() + ", isNew()=" + isNew()
+				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString()
+				+ "]";
+	}
+
 }
