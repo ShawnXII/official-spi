@@ -33,13 +33,6 @@ public interface BaseFacadeService<M extends Entity<ID>, ID extends java.io.Seri
 	 */
 	public List<M> save(Collection<M> m);
 
-	/**
-	 * 保存并清空缓存数据
-	 * 
-	 * @param m
-	 * @return
-	 */
-	public M saveAndFlush(M m);
 
 	/**
 	 * 根据主键删除相应实体

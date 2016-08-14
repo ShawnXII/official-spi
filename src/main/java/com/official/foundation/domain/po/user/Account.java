@@ -157,5 +157,13 @@ public class Account extends BaseEntity<Long>{
 	public void setRole(Role role) {
 		this.role = role;
 	}
+
+	@Override
+	public String toString() {
+		return "Account [username=" + username + ", password=" + password + ", salt=" + salt + ", mobile=" + mobile
+				+ ", mobileState=" + mobileState + ", email=" + email + ", emailState=" + emailState + ", nickname="
+				+ nickname + ", payPassword=" + payPassword + ", image=" + image + ", state=" + state + ", role=" + role
+				+ "]";
+	}
 	
 }
