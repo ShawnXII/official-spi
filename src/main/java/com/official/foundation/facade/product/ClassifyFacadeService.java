@@ -1,5 +1,6 @@
 package com.official.foundation.facade.product;
 
+import java.util.List;
 import java.util.Map;
 
 import com.official.foundation.domain.po.product.Classify;
@@ -13,7 +14,7 @@ public interface ClassifyFacadeService extends BaseFacadeService<Classify,Long>{
 	 * @param pageSize
 	 * @return
 	 */
-	public  Map<String, Object> searchClassify(Classify classify,Integer pageIndex,Integer pageSize);
+	public  List<Classify> searchClassify(Classify classify);
 	
 	
 }
