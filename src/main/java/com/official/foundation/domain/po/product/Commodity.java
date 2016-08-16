@@ -2,9 +2,13 @@ package com.official.foundation.domain.po.product;
 
 import java.math.BigDecimal;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import com.official.core.base.entity.BaseEntity;
@@ -58,9 +62,12 @@ public class Commodity extends BaseEntity<Long>{
 	private String specificationParameter;
 	
 	//净水器分类
-	@Column(name="classify_id",nullable=false)
-	private Long classifyId;
+	/*@Column(name="classify_id",nullable=false)
+	private Long classifyId;*/
 	
+	@ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.LAZY, optional = false)  
+	@JoinColumn(name = "classify_id")
+	private Classify classify;
 	//净水器品牌
 	@Column(name="brand_id",nullable=false)
 	private Long brandId;
@@ -123,7 +130,7 @@ public class Commodity extends BaseEntity<Long>{
 	//包装清单 JSON 格式:{'':''}
 	@Column(name="packing_list")
 	private String packingList;
-
+	
 	public String getTitle() {
 		return title;
 	}
@@ -188,16 +195,24 @@ public class Commodity extends BaseEntity<Long>{
 		this.specificationParameter = specificationParameter;
 	}
 
-	public Long getClassifyId() {
+/*	public Long getClassifyId() {
 		return classifyId;
 	}
 
 	public void setClassifyId(Long classifyId) {
 		this.classifyId = classifyId;
-	}
+	}*/
 
 	public Long getBrandId() {
 		return brandId;
+	}
+
+	public Classify getClassify() {
+		return classify;
+	}
+
+	public void setClassify(Classify classify) {
+		this.classify = classify;
 	}
 
 	public void setBrandId(Long brandId) {
