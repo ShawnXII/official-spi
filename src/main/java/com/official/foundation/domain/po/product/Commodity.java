@@ -69,15 +69,15 @@ public class Commodity extends BaseEntity<Long>{
 	@JoinColumn(name = "classify_id")
 	private Classify classify;
 	//净水器品牌
-	@Column(name="brand_id",nullable=false)
+	@Column(name="brand_id")
 	private Long brandId;
 	
 	//净水器内部编号 
-	@Column(name="item",nullable=false)
+	@Column(name="item")
 	private String item;
 	
 	//主图
-	@Column(name="main_picture",nullable=false)
+	@Column(name="main_picture")
 	private String mainPicture;
 	
 	//组图 JSON数组
