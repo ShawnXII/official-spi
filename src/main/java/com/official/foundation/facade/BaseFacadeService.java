@@ -86,56 +86,6 @@ public interface BaseFacadeService<M extends Entity<ID>, ID extends java.io.Seri
 	 * @return
 	 */
 	public List<M> findAll();
-
-	/**
-	 * 按照顺序查询所有实体
-	 * 
-	 * @param sort
-	 * @return
-	 */
-	public List<M> findAll(Sort sort);
-
-	/**
-	 * 分页以及排序查询
-	 * 
-	 * @param pageable
-	 * @return
-	 */
-	public Page<M> findAll(Pageable pageable);
-
-	/**
-	 * 按照条件分页并排序查询
-	 * 
-	 * @param searchable
-	 * @return
-	 */
-	public Page<M> findAll(Searchable searchable);
-
-
-	/**
-	 * 按照条件不分页 不排序查询
-	 * 
-	 * @param searchable
-	 * @return
-	 */
-	public List<M> findAllWithNoPageNoSort(Searchable searchable);
-
-	/**
-	 * 按照条件排序查询 (不分页)
-	 * 
-	 * @param searchable
-	 * @return
-	 */
-	public List<M> findAllWithSort(Searchable searchable);
-
-	/**
-	 * 按照条件统计实体
-	 * 
-	 * @param searchable
-	 * @return
-	 */
-	public Long count(Searchable searchable);
-
 	/**
 	 * 情况缓存数据
 	 */

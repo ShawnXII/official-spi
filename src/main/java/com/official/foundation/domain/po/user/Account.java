@@ -35,13 +35,13 @@ public class Account extends BaseEntity<Long>{
 	//手机
 	@Column(name = "mobile",length=15)
 	private String mobile;
-	//手机验证状态
+	//手机验证状态  0:false 1:true
 	@Column(name = "mobile_state")
 	private Integer mobileState;
 	//邮箱
 	@Column(name = "email")
 	private String email;	
-	//邮箱验证状态
+	//邮箱验证状态 0:false 1:true
 	@Column(name = "email_state")
 	private Integer emailState;
 	
@@ -54,7 +54,7 @@ public class Account extends BaseEntity<Long>{
 	@Column(name = "image")
 	private String image;
 	
-	//账号状态
+	//账号状态 0:正常 1:锁定 2:禁用 
 	@Column(name = "state")
 	private Integer state;
 	
